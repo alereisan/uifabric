@@ -5,8 +5,12 @@ angular.module('uifabricApp').config(['$translateProvider', function ($translate
   $translateProvider.translations('de', {
     'HOME': 'Home',
     'STACK': 'Stack',
-    'PROJECTS': 'Projekte',
+    'PORTFOLIO': 'Portfolio',
     'ABOUT': 'Über',
-    'CONTACT': 'Kontakt'
+    'CONTACT': 'Kontakt',
+    'WE_BUILD': 'Wir entwickeln',
+    'USER_INTERFACES': 'Benutzeroberflächen',
+    'SEND_BRIEFING': 'Briefing senden',
+    'PROCESS': 'Entwicklungsprozess'
   });
 }]);

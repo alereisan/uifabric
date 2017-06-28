@@ -19,13 +19,14 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'ui.bootstrap'
   ])
-  .config(function ($urlRouterProvider, $translateProvider) {
+  .config(function ($urlRouterProvider, $translateProvider, $stateProvider) {
 
     // Important App Config goes here
 
-    $urlRouterProvider.otherwise('/app/en'); //default route
-    $translateProvider.preferredLanguage('de'); //default language
+    $urlRouterProvider.otherwise('/app/en/home'); //default route
+    $translateProvider.preferredLanguage('en'); //default language
 
   });

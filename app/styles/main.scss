@@ -3,89 +3,120 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+$main-text-color: #43c743;
+$main-bg-color: #000;
+$break-small: 320px;
+$break-medium: 767px;
+$break-large: 991px;
+$break-xl: 1200;
+
+.home {
+  h1, .h1 {
+    font-size: 68px;
+    color: #fff;
+    @media(max-width: $break-large) {
+      font-size: 58px;
+    }
+    @media(max-width: $break-medium) {
+      font-size: 48px;
+    }
+    @media(max-width: $break-small) {
+      font-size: 38px;
+    }
+  }
 }
 
-body {
+
+.language-switcher {
+  a {
+    line-height: 50px;
+    font-size: 12px;
+    opacity: 0.87;
+    font-weight: 800;
+    color: $main-text-color;
+  }
+  .active {
+    text-decoration: underline;
+    opacity: 1.0;
+  }
+}
+
+.navbar-fixed-top {
   padding: 0;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #000000;
+}
+
+.home {
+  .section-1 {
+    background-image: url('../images/pattern.png');
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    .container {
+      text-align: center;
+      align-self: center;
+    }
+  }
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.uifabric-navbar {
+  background-color: $main-bg-color;
+  border: none;
+  border-radius: 0;
+  a {
+    color: $main-text-color;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  li {
+    opacity: 0.87;
+  }
+  .active {
+    opacity: 1.0;
+  }
+  .nav > li > a:hover, .nav > li > a:focus, .nav > li > .active {
+    background-color: $main-text-color;
+    color: $main-bg-color;
+  }
+  .active a {
+    background-color: $main-text-color;
+    color: $main-bg-color;
+    opacity: 1.0;
+  }
+  .navbar-brand {
+    color: #fff;
+  }
+  .navbar-toggle {
+    color: $main-text-color;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.home {
+  .section-1 {
+    p {
+      margin-top: 25px;
+      color: #fff;
+    }
+  }
+}
+
+.home-keyword {
+  font-weight: 800;
+}
+
 .footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+  p {
+    margin: 0;
+    line-height: 30px;
   }
 }

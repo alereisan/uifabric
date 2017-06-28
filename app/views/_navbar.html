@@ -1,12 +1,10 @@
-<div class="navbar navbar-default" role="navigation">
+<nav id="header-navbar" class="navbar uifabric-navbar" ng-class="{'navbar-fixed-top':scrollDown}" role="navigation" scroll-nav>
   <div class="container">
     <div class="navbar-header">
 
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+
+        <span class="glyphicon glyphicon-menu-hamburger"></span>
       </button>
 
       <a class="navbar-brand" href="#/">UiFabric</a>
@@ -15,12 +13,18 @@
     <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
       <ul class="nav navbar-nav">
-        <li class="active"><a href ui-sref="app.home">Home</a></li>
-        <li><a href ui-sref="app.stack">{{ 'STACK' | translate }}</a></li>
-        <li><a href ui-sref="app.projects">{{ 'PROJECTS' | translate }}</a></li>
-        <li><a href ui-sref="app.about">{{ 'ABOUT' | translate }}</a></li>
-        <li><a href ui-sref="app.contact">{{ 'CONTACT' | translate }}</a></li>
+        <li ui-sref-active="active"><a href ui-sref="app.home"><span class="glyphicon glyphicon-home"></span></a></li>
+        <li ui-sref-active="active" class="hidden"><a href ui-sref="app.stack">{{ 'STACK' | translate }}</a></li>
+        <li ui-sref-active="active"><a href ui-sref="app.process">{{ 'PROCESS' | translate }}</a></li>
+        <li ui-sref-active="active"><a href ui-sref="app.projects">{{ 'PORTFOLIO' | translate }}</a></li>
+        <li ui-sref-active="active" class="hidden"><a href ui-sref="app.about">{{ 'ABOUT' | translate }}</a></li>
+        <li ui-sref-active="active" class="hidden"><a href ui-sref="app.contact">{{ 'CONTACT' | translate }}</a></li>
+        <li ui-sref-active="active"><a href ui-sref="app.briefing">{{ 'SEND_BRIEFING' | translate }}</a></li>
       </ul>
+      <div class="pull-right language-switcher">
+        <a href ng-click="changeLanguage('en')" ng-class="{active: currentLang == 'en'}">EN</a>
+        <a href ng-click="changeLanguage('de')" ng-class="{active: currentLang == 'de'}">DE</a>
+      </div>
     </div>
   </div>
-</div>
+</nav>
